@@ -175,6 +175,12 @@ def download_from_request(http_response, tar_file_name, extract_dir):
     os.remove(tar_file_name)
 
 
+def start_cluster_standalone_job_server():
+    print('use service.sh to start standalone node server....')
+    os.system('sh service.sh start --standalone_node')
+    time.sleep(5)
+
+
 def get_runtime_conf(config_data, func):
     job_runtime_conf = {
         "initiator": {},
